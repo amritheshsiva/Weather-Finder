@@ -1,47 +1,25 @@
-const apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
-const city = 'Trivandrum';
-const country = 'India';
-
-const location = `${city},${country}`;
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
-
 function getWeather() {
-    console.log('Fetching weather data...');
+    var apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
+    var city = document.getElementById('city').value;
 
-    // Direct API access URL for reference
-    const directApiAccessUrl = `https://api.openweathermap.org/data/2.5/weather?q=Trivandrum,India&appid=${apiKey}`;
-    console.log('Direct API Access URL:', directApiAccessUrl);
+    // Use HTTPS for the API request
+    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
-        .then(response => {
-            console.log('Response Status:', response.status);
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log('API Data:', data);
-            displayWeather(data);
+            if (data.cod && data.cod !== '404') {
+                var temperature = data.main.temp;
+                var description = data.weather[0].description;
+
+                var weatherInfo = `Temperature in ${city}: ${temperature}°C, Description: ${description}`;
+                document.getElementById('weatherInfo').innerText = weatherInfo;
+            } else {
+                document.getElementById('weatherInfo').innerText = 'City not found. Please enter a valid city name.';
+            }
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
-            alert('Error fetching weather data. Please try again.');
+            document.getElementById('weatherInfo').innerText = 'Error: Unable to fetch weather data.';
         });
 }
-
-function displayWeather(data) {
-    const weatherContainer = document.getElementById('weather-container');
-
-    const cityName = data.name;
-    const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
-    const weatherDescription = data.weather[0].description;
-
-    const weatherHTML = `
-        <h2>${cityName}</h2>
-        <p>Temperature: ${temperature} °C</p>
-        <p>Weather: ${weatherDescription}</p>
-    `;
-
-    weatherContainer.innerHTML = weatherHTML;
-}
-
-// Fetch weather data when the script is loaded
-getWeather();
