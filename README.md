@@ -6,6 +6,7 @@ The motivation behind SimpleWeather is to create a user-friendly and straightfor
 ### Solution
 Creating a weather app is a great project that involves fetching real-time data and presenting it in a user-friendly interface.
 ### Features
-- Set up push notifications or alerts for severe weather conditions in the user's selected locations.
-- Implement a caching mechanism to allow users to access previously fetched weather data when offline.
+- Allows users to input a city name to get weather information.
+- Applies basic styling to the app using CSS for a clean and visually appealing interface.
+- Displays basic weather information such as city name, temperature (in Celsius), and weather description on the webpage.
 ### Project
