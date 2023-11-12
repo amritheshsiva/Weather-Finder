@@ -31,4 +31,22 @@ function displayWeather(data) {
     `;
 
     weatherContainer.innerHTML = weatherHTML;
+    function getWeather() {
+    console.log('Fetching weather data...');
+
+    fetch(apiUrl)
+        .then(response => {
+            console.log('Response Status:', response.status);
+            return response.json();
+        })
+        .then(data => {
+            console.log('API Data:', data);
+            displayWeather(data);
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            alert('Error fetching weather data. Please try again.');
+        });
+}
+
 }
