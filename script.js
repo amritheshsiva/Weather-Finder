@@ -1,15 +1,11 @@
+const apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
+const city = 'Trivandrum';
+const country = 'Kerala';
+
+const location = `${city},${country}`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+
 function getWeather() {
-    const locationInput = document.getElementById('location');
-    const location = locationInput.value.trim();
-
-    if (location === '') {
-        alert('Please enter a city');
-        return;
-    }
-
-    const apiKey = '549babff775f90b4035f7d4e4898eb06'; 
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
-
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
