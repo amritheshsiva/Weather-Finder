@@ -3,7 +3,7 @@ const city = 'Trivandrum';
 const country = 'Kerala';
 
 const location = `${city},${country}`;
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Trivandrm}&appid=${95c4bc4204d2e412aa82f70c15889d1f}`;
 
 function getWeather() {
     fetch(apiUrl)
