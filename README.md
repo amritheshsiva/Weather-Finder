@@ -1,6 +1,6 @@
 # Weather-Finder
 ## Project Description
-Weather Finder is a basic weather website that provides users with real-time weather information for a specified location. Users can input the city or use their device's location to get current weather conditions, temperature,etc.
+Weather Finder is a basic weather website that provides users with real-time weather information for a specified location. Users can input the city to get current weather conditions, temperature,etc.
 ### Motivation:
 The motivation behind this Weather Finder is to create a user-friendly and straightforward weather application that allows users to quickly access up-to-date weather information.
 ### Solution
