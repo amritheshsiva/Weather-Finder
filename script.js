@@ -7,7 +7,7 @@ function getWeather() {
         return;
     }
 
-    const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your API key
+    const apiKey = '549babff775f90b4035f7d4e4898eb06'; 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
 
     fetch(apiUrl)
@@ -25,7 +25,7 @@ function displayWeather(data) {
     const weatherContainer = document.getElementById('weather-container');
 
     const cityName = data.name;
-    const temperature = Math.round(data.main.temp - 273.15); // Convert from Kelvin to Celsius
+    const temperature = Math.round(data.main.temp - 273.15); 
     const weatherDescription = data.weather[0].description;
 
     const weatherHTML = `
