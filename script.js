@@ -1,4 +1,3 @@
-// script.js
 const apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
 const city = 'Trivandrum';
 const country = 'India';
@@ -8,6 +7,10 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&ap
 
 function getWeather() {
     console.log('Fetching weather data...');
+
+    // Direct API access URL for reference
+    const directApiAccessUrl = `https://api.openweathermap.org/data/2.5/weather?q=Trivandrum,India&appid=${apiKey}`;
+    console.log('Direct API Access URL:', directApiAccessUrl);
 
     fetch(apiUrl)
         .then(response => {
