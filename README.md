@@ -26,7 +26,7 @@ Check out the live demo: [Weather Finder Live](https://cloudpulse.000webhostapp.
 
 ## Screenshots
 
-![Weather Finder](screenshots/weather-finder.png)
+![Weather Finder](weather_finder.png)
 
 ## Credits
 
