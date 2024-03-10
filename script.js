@@ -1,5 +1,4 @@
 function getWeather() {
-    var apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
     var city = document.getElementById('city').value;
 
     // Use HTTPS for the API request
