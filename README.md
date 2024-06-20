@@ -10,7 +10,7 @@ This is a simple Weather Finder web application that allows users to get the cur
 
 ## Live Demo
 
-Check out the live demo: [Weather Finder Live](https://cloudpulse.000webhostapp.com/)
+Check out the live demo: https://weather-finder-three.vercel.app/
 
 ## Features
 
