@@ -1,39 +1,43 @@
-# Weather Finder
+# 🌤 Weather Finder
 
-This is a simple Weather Finder web application that allows users to get the current weather information for a specific city. It utilizes the OpenWeatherMap API to fetch real-time weather data.
+A modern and responsive Weather Finder web application that allows users to search for real-time weather information of any city using the OpenWeatherMap API.
 
-## How to Use
+🔗 **Live Demo:**  
+https://weather-finder-three.vercel.app/
 
-1. Open the `index.html` file in your web browser.
-2. Enter the desired city in the input field.
-3. Click the "Get Weather" button to retrieve the current weather information.
+---
 
-## Live Demo
+## 🚀 Features
 
-Check out the live demo: https://weather-finder-three.vercel.app/
+- 🔎 Search weather by city name  
+- 🌡 Displays temperature in Celsius  
+- 🌥 Shows weather description  
+- 💧 Displays humidity percentage  
+- 🌬 Shows wind speed  
 
-## Features
+---
 
-- **User-Friendly Interface**: The application provides a straightforward interface for users to input a city and get weather details easily.
+## 🛠 Technologies Used
 
-- **Responsive Design**: The design is responsive, ensuring a seamless experience on various devices.
+- **HTML5** – Page structure  
+- **CSS3** – Custom styling and layout  
+- **Bootstrap** – Responsive UI components  
+- **JavaScript** – API integration  
+- **OpenWeatherMap API** – Real-time weather data  
 
-## Technologies Used
+---
 
-- **HTML**: Structured the web page.
-- **CSS**: Styled the page for a visually appealing look.
-- **JavaScript**: Implemented functionality to fetch and display weather information.
+---
 
-## Screenshots
+## ⚙️ How It Works
 
-![Weather Finder](weather_finder.png)
+1. User enters a city name.
+2. JavaScript sends a request to the OpenWeatherMap API.
+3. The API returns weather data in JSON format.
+4. The application dynamically updates the UI with:
+   - Temperature  
+   - Weather condition  
+   - Humidity  
+   - Wind speed  
 
-## Credits
-
-- OpenWeatherMap API: [https://openweathermap.org/](https://openweathermap.org/)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Feel free to contribute or customize this project according to your needs. If you encounter any issues or have suggestions, please create an issue or submit a pull request.
+---
