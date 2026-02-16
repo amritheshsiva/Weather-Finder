@@ -1,9 +1,7 @@
+const apiKey = d36988af5c3ecc8027255d80a9597402;
 function getWeather() {
     var city = document.getElementById('city').value;
-
-    // Use HTTPS for the API request
     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
