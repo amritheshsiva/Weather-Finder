@@ -1,19 +1,21 @@
 body {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     font-family: 'Segoe UI', sans-serif;
 }
 
 .weather-card {
-    width: 350px;
-    border-radius: 15px;
+    width: 380px;
+    border-radius: 20px;
     border: none;
+    background: white;
 }
 
-#weatherInfo {
-    font-size: 18px;
-    font-weight: 500;
+#weatherInfo h3 {
+    font-size: 40px;
+    font-weight: bold;
 }
 
-img {
-    width: 80px;
+#weatherInfo p {
+    margin: 5px 0;
+    font-size: 16px;
 }
