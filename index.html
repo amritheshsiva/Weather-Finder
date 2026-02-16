@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <script src="config.js"></script>
 </head>
 <body>
 
-    <h1>Weather Finder</h1>
-
-    <label for="city">Enter City:</label>
-    <br>
-    <input type="text" id="city" name="city" required>
-    <br>
-    <button onclick="getWeather()">Get Weather</button>
-
-    <div id="weatherInfo"></div>
-
-    <script src="script.js"></script>
-
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 text-center weather-card">
+        <h2 class="mb-4">🌤 Weather Finder</h2>
+        <div class="form-group">
+            <input type="text" id="city" class="form-control" placeholder="Enter City Name">
+        </div>
+        <button onclick="getWeather()" class="btn btn-primary btn-block mb-3">
+            Get Weather
+        </button>
+        <div id="weatherInfo" class="mt-3"></div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
+
 </html>
