@@ -1,22 +1,32 @@
-const apiKey = '95c4bc4204d2e412aa82f70c15889d1f';
+const apiKey = "95c4bc4204d2e412aa82f70c15889d1f";  
 function getWeather() {
-    var city = document.getElementById('city').value;
-    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    fetch(apiUrl)
-        .then(response => response.json())
+    const city = document.getElementById("city").value;
+    if (!city) {
+        document.getElementById("weatherInfo").innerHTML =
+            "Please enter a city name.";
+        return;
+    }
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
+    fetch(url)
+        .then(res => res.json())
         .then(data => {
-            if (data.cod && data.cod !== '404') {
-                var temperature = data.main.temp;
-                var description = data.weather[0].description;
-
-                var weatherInfo = `Temperature in ${city}: ${temperature}°C, Description: ${description}`;
-                document.getElementById('weatherInfo').innerText = weatherInfo;
-            } else {
-                document.getElementById('weatherInfo').innerText = 'City not found. Please enter a valid city name.';
+            if (data.cod === 200) {
+                const temp = data.main.temp;
+                const desc = data.weather[0].description;
+                const humidity = data.main.humidity;
+                const wind = data.wind.speed;
+                document.getElementById("weatherInfo").innerHTML =
+                    "<h4>" + data.name + "</h4>" +
+                    "<p>Temperature: " + temp + "°C</p>" +
+                    "<p>Description: " + desc + "</p>" +
+                    "<p>Humidity: " + humidity + "%</p>" +
+                    "<p>Wind Speed: " + wind + " m/s</p>";
+            } 
+            else {
+                document.getElementById("weatherInfo").innerHTML = "City not found.";
             }
         })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            document.getElementById('weatherInfo').innerText = 'Error: Unable to fetch weather data.';
+        .catch(() => {
+            document.getElementById("weatherInfo").innerHTML = "Error fetching weather data.";
         });
 }
