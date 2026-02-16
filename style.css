@@ -1,42 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-h1 {
-    color: #333;
-}
-
-label {
-    margin-right: 10px;
-}
-
-input {
-    padding: 5px;
-    margin-right: 10px;
-}
-
-button {
-    padding: 5px 10px;
-    background-color: #4caf50;
-    color: white;
+.weather-card {
+    width: 350px;
+    border-radius: 15px;
     border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
 }
 
 #weatherInfo {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+img {
+    width: 80px;
 }
