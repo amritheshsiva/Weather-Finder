@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <title>Weather Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
+
 <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card shadow-lg p-4 text-center weather-card">
-            <h2 class="mb-4">🌤 Weather Finder</h2>
-            <div class="form-group">
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg weather-card p-4">
+
+        <h2 class="text-center mb-4 text-primary">🌤 Weather Finder</h2>
+
+        <div class="input-group mb-3">
             <input type="text" id="city" class="form-control" placeholder="Enter City Name">
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="getWeather()">Search</button>
             </div>
-            <button onclick="getWeather()" class="btn btn-primary btn-block mb-3">Get Weather</button>
-            <div id="weatherInfo"></div>
         </div>
+
+        <div id="weatherInfo" class="text-center mt-3"></div>
+
     </div>
+</div>
 
-
+<script src="script.js"></script>
 
 </body>
 </html>
